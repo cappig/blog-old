@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import markdown, glob, os, yaml
 
 #open the header and footer files
