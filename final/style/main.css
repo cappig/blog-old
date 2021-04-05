@@ -1,0 +1,57 @@
+/* text and body color and propertys */
+:root {
+    --background-color: rgb(247, 247, 247);
+    --color: #333;
+}
+body {
+    background: var(--background-color);
+    color: var(--color);
+}
+
+.container-fluid {
+    padding-right: 55px;
+    padding-left: 55px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-articles {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* link styling*/
+a { 
+    color: #dc8100; text-decoration: none; 
+}
+a:hover { 
+    color: #333; text-decoration: none; 
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* navbar list */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    padding: 10px;
+}
