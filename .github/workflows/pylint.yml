@@ -15,7 +15,7 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
-        pip install pylint && glob3 && PyYAML && markdown
+        pip install pylint && glob2 && PyYAML && markdown
     - name: Analysing the code with pylint
       run: |
         pylint `ls -R|grep .py$|xargs`
