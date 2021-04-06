@@ -14,12 +14,15 @@ body {
     padding-left: 55px;
     margin-right: auto;
     margin-left: auto;
+    min-height:100%
 }
 .container-articles {
     padding-left: 100px;
     padding-right: 100px;
     margin-right: auto;
     margin-left: auto;
+    overflow: auto;
+	padding-bottom: 23px;
 }
 
 /* link styling*/
@@ -55,4 +58,13 @@ ul {
 li {
     display: inline;
     padding: 10px;
+}
+
+/* footer */
+footer {
+	position:relative;
+	height:23;
+	margin-top:-23;
+	clear:both;
+	font-size: 12px;
 }
