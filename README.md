@@ -1,5 +1,5 @@
 # My super simple blog
-[![build](https://github.com/cappig/blog/actions/workflows/build.yml/badge.svg)](https://github.com/cappig/blog/actions)
+![build](https://github.com/cappig/blog/actions/workflows/build.yml/badge.svg)
 
 *Code for my blog. Some stuff still needs to be improved, Im working on it. Check it out at [cappig.ga](https://cappig.ga/) or [シ.cf](https://xn--xck.cf/) (both domain point to the same site).*
 
