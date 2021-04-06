@@ -6,6 +6,7 @@
 body {
     background: var(--background-color);
     color: var(--color);
+    zoom: 140%;
 }
 
 .container-fluid {
