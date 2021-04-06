@@ -1,6 +1,9 @@
 name: Build
 
-on: [push]
+# Runs only on the main branch
+on:
+  push:
+    branches: ['main']
 
 jobs:
   build:
@@ -15,6 +18,15 @@ jobs:
         python-version: 3.8
     - name: install dependencies
       run: pip install markdown && pip install pyyaml
-    
     - name: Build site
       run: python publish.py
+    - name: Commit files  # commit 
+      run: |
+        git config --local user.name  ${{ github.actor }}
+        git add ./final
+        git commit -m "Updating the repository GitHub html pages in the docs folder"
+    - name: Push changes  # push the output folder to your repo
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
