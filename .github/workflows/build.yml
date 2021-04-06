@@ -1,6 +1,6 @@
 name: Build
 
-# Runs only on the main branch
+# Runs only on the main branch and only in the src folder
 on:
   push:
     branches: ['main']
@@ -24,7 +24,7 @@ jobs:
       run: |
         git config --local user.name  ${{ github.actor }}
         git add ./final
-        git commit -m "Updating the repository GitHub html pages in the docs folder"
+        git commit -m "Updating the repository GitHub html pages in the docs folder" || true
     - name: Push changes  # push the output folder to your repo
       uses: ad-m/github-push-action@master
       with:
