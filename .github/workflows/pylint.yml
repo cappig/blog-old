@@ -13,5 +13,8 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
+    - name: install dependencies
+      run: pip install markdown
+    
     - name: Build site
       run: python publish.py
