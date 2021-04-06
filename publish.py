@@ -35,8 +35,8 @@ for post in posts:
         yamld, content = text[3:].split('---')
         y = yaml.safe_load(yamld)
         #Add linked title
-        feed += '<a class="h3" href="posts/'+postn[j][:-3]+'.html">'+y['title']+'</a>' + "<br> \n"
-        feed += '<p class="text-muted"><i>'+y['date']+ '</i>' +'   |   ' +y['description']+'</p><br>\n'
+        feed += '<article>\n<a class="h3" href="posts/'+postn[j][:-3]+'.html">'+y['title']+'</a>' + "<br> \n"
+        feed += '<p class="text-muted"><i>'+y['date']+ '</i>' +'   |   ' +y['description']+'</p><br>\n</article>\n'
 
 #make about me page
 am_html = markdown.markdown(aboutme)
