@@ -14,5 +14,4 @@ jobs:
       with:
         python-version: 3.8
     - name: Build site
-      run: |
-        python publish.py`
+      run: python publish.py
