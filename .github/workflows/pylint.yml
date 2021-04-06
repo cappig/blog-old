@@ -13,9 +13,6 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: Analysing the code with pylint
-      run: |
-        pylint `ls -R|grep .py$|xargs`
     - name: Build site
       run: |
         python publish.py`
