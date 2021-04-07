@@ -7,25 +7,28 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
+    
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
+        
     - name: install dependencies
       run: pip install markdown && pip install pyyaml
+      
     - name: Build site
       run: python publish.py
-    - name: Commit files  # only commits if theres a change to commit -> || true
+      
+    - name: Commit files  # Only commits if theres a change to commit hence the || true
       run: |
         git config --local user.name  ${{ github.actor }}
         git add ./final
-        git commit -m "Updating the repository GitHub html pages in the docs folder" || true
-    - name: Push changes  # push the output folder to repo
+        git commit -m "Update the html in final" || true
+
+    - name: Push changes  # Push the output folder to repo
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
