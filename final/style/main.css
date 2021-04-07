@@ -9,6 +9,7 @@ body {
     zoom: 140%;
 }
 
+/* containers */
 .container-fluid {
     padding-right: 55px;
     padding-left: 55px;
@@ -23,6 +24,9 @@ body {
     margin-left: auto;
     overflow: auto;
 	padding-bottom: 23px;
+}
+nav-container {
+    justify-content: center;
 }
 
 /* link styling*/
