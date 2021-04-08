@@ -19,27 +19,30 @@
     <div class ="container container-fluid">
         <br>
         <header>
-            <h1 class="text-center pb-1 pt-1" style="cursor: pointer;" onClick = "window.location.reload();"><strong>Cappigs's blog</strong></h1>
+            <a class="header-link" href="https://cappig.ga/">
+                <h1 class="text-center pb-1 pt-1"><strong>Cappigs's blog</strong></h1>
+            </a>
             <ul class="text-center">
-                <div class="nav-container">
+                <div class="container">
                     <li><a class="text-center text-muted" href="index.html">Home</a></li>
                     <li><a class="text-center text-muted" href="https://github.com/cappig/blog">Github repo</a></li>
                     <li><a class="text-center text-muted" href="about_me.html">About me</a></li>
                 </div>
             </ul>
-            <img class="dm-button" src="assets/dm-icon.svg" alt="darkmode" id="dm-btn">
+            <img class="dm-button" src="assets/dm-icon.svg" alt="darkmode" title="dark mode" onclick="btnclick()">
         </header>
         <hr>
         <br>
-        <div class="container-articles ">
+        <div class="container-articles">
 <article>
 <a class="h3" href="posts/hello.html">Hello world</a><br> 
-<p class="text-muted"><i>4/5/2021</i>   |   A little bit about the blog</p><br>
+<p class="text-muted"><i>Apr 5, 2021</i>   |   A little bit about the blog</p><br>
 </article>
         </div>
         </div>
         <footer>
             <p class="text-muted text-center"> <a href="https://opensource.org/licenses/MIT">Copyright &copy;</a> 2021, Made by Cappig </p>
-        </footer>        
+        </footer> 
+        <script src="script/main.js"></script>          
     </body>
 </html>

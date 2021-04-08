@@ -25,9 +25,6 @@ body {
     overflow: auto;
 	padding-bottom: 23px;
 }
-nav-container {
-    justify-content: center;
-}
 
 /* link styling*/
 a { 
@@ -62,6 +59,12 @@ ul {
 li {
     display: inline;
     padding: 10px;
+}
+
+/* header */
+a.header-link{
+    color: var(--color);
+    cursor: pointer;
 }
 
 /* footer */

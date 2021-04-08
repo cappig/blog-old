@@ -19,25 +19,28 @@
     <div class ="container container-fluid">
         <br>
         <header>
-            <h1 class="text-center pb-1 pt-1" style="cursor: pointer;" onClick = "window.location.reload();"><strong>Cappigs's blog</strong></h1>
+            <a class="header-link" href="https://cappig.ga/">
+                <h1 class="text-center pb-1 pt-1"><strong>Cappigs's blog</strong></h1>
+            </a>
             <ul class="text-center">
-                <div class="nav-container">
+                <div class="container">
                     <li><a class="text-center text-muted" href="index.html">Home</a></li>
                     <li><a class="text-center text-muted" href="https://github.com/cappig/blog">Github repo</a></li>
                     <li><a class="text-center text-muted" href="about_me.html">About me</a></li>
                 </div>
             </ul>
-            <img class="dm-button" src="assets/dm-icon.svg" alt="darkmode" id="dm-btn">
+            <img class="dm-button" src="assets/dm-icon.svg" alt="darkmode" title="dark mode" onclick="btnclick()">
         </header>
         <hr>
         <br>
-        <div class="container-articles "><h2>About me</h2>
+        <div class="container-articles"><h2>About me</h2>
 <p>Hi, my name’s Matt and I sometimes go by Cappig. This’ll be my blog where I’ll post all sorts of stuff when I feel like it. Check out <a href="http://xn--xck.cf">シ.cf</a>. This domain will point to the same blog, but I just thought it would be neat to have a cool punycode domain.<br />
 This blog is open source and all the code is avalible on <a href="https://github.com/cappig/blog">Github</a>.</p>
 <p>— Have a nice day, Matt :]</p>        </div>
         </div>
         <footer>
             <p class="text-muted text-center"> <a href="https://opensource.org/licenses/MIT">Copyright &copy;</a> 2021, Made by Cappig </p>
-        </footer>        
+        </footer> 
+        <script src="script/main.js"></script>          
     </body>
 </html>

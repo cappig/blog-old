@@ -1,7 +1,12 @@
 /* darkmode switching is still a work in progress */
-.dark-mode {
+[data-theme="dark"] {
     --background-color: #192734;
     --color: rgb(247, 247, 247);
+}
+
+[data-theme="light"] {
+    --background-color: rgb(247, 247, 247);
+    --color: #333;
 }
 
 .dm-button {
@@ -10,5 +15,7 @@
     text-decoration: none;
     height: 30px;
     position: absolute;
-    top: 80px;
+    top: 85px;
+	padding-left:10px;
+    cursor: pointer;
 }

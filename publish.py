@@ -8,6 +8,8 @@ with open("src/assets/footer.html", "r") as f:
     footer = f.read()
 with open("src/assets/article_header.html", "r") as f:
     arheader = f.read()
+with open("src/assets/article_footer.html", "r") as f:
+    arfooter = f.read()
 with open("src/assets/about_me.md", "r") as f:
     aboutme = f.read()
 
@@ -22,7 +24,7 @@ for post in posts:
         text = f.read()
         yamld, content = text[3:].split('---')
         y = yaml.safe_load(yamld)
-        html = arheader + '<h1>' + y['title'] + '</h1>' + '<p class="text-muted text-left">'+ y['date']+ '</p>'+ markdown.markdown(content) + footer
+        html = arheader + '<h1>' + y['title'] + '</h1>' + '<p class="text-muted text-left">'+ y['date']+ '</p>'+ markdown.markdown(content) + arfooter
         open("final/posts/"+postn[i][:-3]+".html", "w").write(html)
         i += 1
 

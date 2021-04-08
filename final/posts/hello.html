@@ -19,25 +19,28 @@
     <div class ="container container-fluid">
         <br>
         <header>
-            <h1 class="text-center pb-1 pt-1" style="cursor: pointer;" onClick = "window.location.reload();"><strong>Cappigs's blog</strong></h1>
+            <a class="header-link" href="https://cappig.ga/">
+                <h1 class="text-center pb-1 pt-1"><strong>Cappigs's blog</strong></h1>
+            </a>
             <ul class="text-center">
-                <div class="nav-container">
+                <div class="container">
                     <li><a class="text-center text-muted" href="../index.html">Home</a></li>
                     <li><a class="text-center text-muted" href="https://github.com/cappig/blog">Github repo</a></li>
                     <li><a class="text-center text-muted" href="../about_me.html">About me</a></li>
                 </div>
             </ul>
-            <img class="dm-button" src="../assets/dm-icon.svg" alt="darkmode" id="dm-btn">
+            <img class="dm-button" src="../assets/dm-icon.svg" alt="darkmode" title="dark mode" onclick="btnclick()">
         </header>
         <hr>
         <br>
-        <div class="container-articles "><h1>Hello world</h1><p class="text-muted text-left">4/5/2021</p><p>Hello world! This is my first blog post :)</p>
+        <div class="container-articles"><h1>Hello world</h1><p class="text-muted text-left">Apr 5, 2021</p><p>Hello world! This is my first blog post :)</p>
 <p>I'm still testing and developing this blog so the domain may change in the future. Check out all the plans I have for the blog at the <a href="https://github.com/cappig/blog/projects/1">project page on github</a>. All in all this blog is just a simple python script that takes a markdown article attaches a premade header and footer and generates all the html. I just wanted something super simple and this seems like a decent solution. I use <a href="https://pages.cloudflare.com/">cloudflare pages</a> to host and deploy the site. A workflow runs the python script and commits any changes made to the files. </p>
 <p>So far I really like cloudflare pages. It's simple and easy to set up. It deploys and builds the site on every commit. Its all contained in the github repo and I don't need to worry about hosting the site.</p>
 <p>Btw I'm currently using a free .ga domain, but ill register and set up a proper domain once I develop the blog a bit more. </p>        </div>
         </div>
         <footer>
             <p class="text-muted text-center"> <a href="https://opensource.org/licenses/MIT">Copyright &copy;</a> 2021, Made by Cappig </p>
-        </footer>        
+        </footer> 
+        <script src="../script/main.js"></script>          
     </body>
 </html>

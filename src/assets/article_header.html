@@ -19,16 +19,18 @@
     <div class ="container container-fluid">
         <br>
         <header>
-            <h1 class="text-center pb-1 pt-1" style="cursor: pointer;" onClick = "window.location.reload();"><strong>Cappigs's blog</strong></h1>
+            <a class="header-link" href="https://cappig.ga/">
+                <h1 class="text-center pb-1 pt-1"><strong>Cappigs's blog</strong></h1>
+            </a>
             <ul class="text-center">
-                <div class="nav-container">
+                <div class="container">
                     <li><a class="text-center text-muted" href="../index.html">Home</a></li>
                     <li><a class="text-center text-muted" href="https://github.com/cappig/blog">Github repo</a></li>
                     <li><a class="text-center text-muted" href="../about_me.html">About me</a></li>
                 </div>
             </ul>
-            <img class="dm-button" src="../assets/dm-icon.svg" alt="darkmode" id="dm-btn">
+            <img class="dm-button" src="../assets/dm-icon.svg" alt="darkmode" title="dark mode" onclick="btnclick()">
         </header>
         <hr>
         <br>
-        <div class="container-articles ">
+        <div class="container-articles">

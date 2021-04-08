@@ -1,6 +1,6 @@
 ---
 title: Hello world
-date: 4/5/2021
+date: Apr 5, 2021
 description: A little bit about the blog
 ---
 Hello world! This is my first blog post :)
