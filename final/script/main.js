@@ -1,15 +1,15 @@
 // change theme based on variable in localstorage
-if (localStorage) {
+if (localStorage.getItem("theme") === null) {
+    // if localstorage isnt defined just set the theme to light
+    document.documentElement.setAttribute("data-theme", "light");
+    localStorage.setItem("theme", "light");
+} else {
     if (localStorage.getItem("theme") === "dark") {
         document.documentElement.setAttribute("data-theme", "dark");
     } 
     if (localStorage.getItem("theme") === "light") {
         document.documentElement.setAttribute("data-theme", "light");
     }
-} else {
-    // if localstorage isnt defined just set the theme to light
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light");
 }
 
 // change theme on click
