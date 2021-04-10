@@ -1,4 +1,3 @@
-/* darkmode switching is still a work in progress */
 [data-theme="dark"] {
     --background-color: #192734;
     --color: rgb(247, 247, 247);
