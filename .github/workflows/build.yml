@@ -1,9 +1,10 @@
 name: Build
 
-# Runs only on push in the main branch
+# Runs only on push in the main branch when src or the python script are edited
 on:
   push:
     branches: ['main']
+    paths: ['src', publish.py]
 
 jobs:
   build:
@@ -28,7 +29,7 @@ jobs:
         git add ./final
         git commit -m "Update the html in final" || true
 
-    - name: Push changes  # Push the output folder to repo
+    - name: Push changes  # Push the output to repo
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}

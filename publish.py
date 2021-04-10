@@ -24,7 +24,7 @@ for post in posts:
         text = f.read()
         yamld, content = text[3:].split('---')
         y = yaml.safe_load(yamld)
-        html = arheader + '<h1>' + y['title'] + '</h1>' + '<p class="text-muted text-left">'+ y['date']+ '</p>'+ markdown.markdown(content) + arfooter
+        html = arheader + '\n<h1>' + y['title'] + '</h1>\n' + '<p class="text-muted text-left date">'+ y['date']+ '</p>\n'+ markdown.markdown(content) + '\n' + arfooter
         open("final/posts/"+postn[i][:-3]+".html", "w").write(html)
         i += 1
 

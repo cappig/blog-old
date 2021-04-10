@@ -1,8 +1,4 @@
 /* text and body color and properties */
-:root {
-    --background-color: rgb(247, 247, 247);
-    --color: #333;
-}
 body {
     background: var(--background-color);
     color: var(--color);
@@ -30,10 +26,12 @@ body {
 
 /* link styling */
 a { 
-    color: #dc8100; text-decoration: none; 
+    color: #dc8100; 
+    text-decoration: none; 
 }
 a:hover { 
-    color: #333; text-decoration: none; 
+    color: var(--color); 
+    text-decoration: none; 
 }
 
 /* scroll bar */
@@ -61,6 +59,12 @@ ul {
 li {
     display: inline;
     padding: 10px;
+}
+
+/* date tag */
+.date {
+    font-size: 90%;
+    padding-bottom: 10px;
 }
 
 /* header */

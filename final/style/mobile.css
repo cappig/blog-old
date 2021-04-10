@@ -4,13 +4,6 @@
         zoom: 200%;
         font-size: 120%;
     }
-    .container-articles {
-        padding-left: 20px;
-        padding-right: 30px;
-        margin-right: auto;
-        margin-left: auto;
-        overflow: auto;
-    }
     .container-fluid {
         padding-right: 40px;
         padding-left: 40px;
@@ -28,5 +21,21 @@
         height: 30px;
         position: absolute;
         top: 85px;
+        filter: var(--filter);
+    }
+    /* add spacing to footer */
+    p.text-muted.text-center {
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .container-articles {
+        padding-left: 20px;
+        padding-right: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: auto;
     }
 }
