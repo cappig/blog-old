@@ -37,7 +37,7 @@ for post in posts:
         feed += '<p class="text-muted"><i>'+y['date']+ '</i>' +'   |   ' +y['description']+'</p><br>\n</article>\n'
 
 #make about me page
-am_html = markdown.markdown(aboutme)
+am_html = '\n' + markdown.markdown(aboutme) + '\n'
 open("final/about_me.html", "w").write(header+am_html+footer)
 
 #pool it all together
