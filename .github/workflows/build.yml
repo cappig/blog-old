@@ -1,10 +1,9 @@
 name: Build
 
-# Runs only on push in the main branch when src or the python script are edited
+# Runs only on push in the main branch
 on:
   push:
     branches: ['main']
-    paths: ['src', publish.py]
 
 jobs:
   build:
