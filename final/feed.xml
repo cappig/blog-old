@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+    <title>Matt's blog</title>
+    <link>https://cappig.ga/</link>
+    <description>Matt's personal blog</description>
+        <image>
+            <url>https://cappig.ga/assets/favicon.png</url>
+            <title>Matt's blog</title>
+            <link>https://cappig.ga/</link>
+        </image>
+    <item>
+        <title>Hello world</title>
+        <link>https://cappig.ga/posts/hello</link>
+        <guid>https://cappig.ga/posts/hello</guid>
+        <description>A little bit about the blog</description>
+    </item>
+</channel>
+</rss>

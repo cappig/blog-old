@@ -49,3 +49,48 @@ final = (
 
 # and generate final index file
 open("final/index.html", "w").write(final)
+
+
+# # # # # # # #  # # # 
+# Generate RSS feed
+# Code is based on https://github.com/vbuterin/blog/pull/10/files
+
+# Generate individual items for articles 
+items = ""
+k = 0
+for post in posts:
+    with open(post, "r") as f:
+        text = f.read()
+        yamld, content = text[3:].split('---')
+        y = yaml.safe_load(yamld)
+        #Add linked title
+
+        items += """<item>
+        <title>{title}</title>
+        <link>{link}</link>
+        <guid>{link}</guid>
+        <description>{description}</description>
+    </item>""".format(
+        title = y['title'],
+        description = y['description'],
+        link = 'https://cappig.ga/posts/' + postn[k][:-3]
+        )
+
+# Generate final RSS feed
+rss = """<?xml version="1.0" ?>
+<rss version="2.0">
+<channel>
+    <title>Matt's blog</title>
+    <link>https://cappig.ga/</link>
+    <description>Matt's personal blog</description>
+        <image>
+            <url>https://cappig.ga/assets/favicon.png</url>
+            <title>Matt's blog</title>
+            <link>https://cappig.ga/</link>
+        </image>
+    {items}
+</channel>
+</rss>""".format(items = items)
+
+# Write RSS feed to file
+open("final/feed.xml", "w").write(rss)
