@@ -51,9 +51,17 @@ final = (
 open("final/index.html", "w").write(final)
 
 
-# # # # # # # #  # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 # Generate RSS feed
 # Code is based on https://github.com/vbuterin/blog/pull/10/files
+import calendar, datetime
+
+# Generate date from yaml
+def getdate(datetext):
+    monthday, year = datetext.split(', ')
+    month, day = monthday.split(' ')
+    date = datetime.datetime(int(year), list(calendar.month_abbr).index(month), int(day))
+    return date.strftime('%a, %d %b %Y 00:00:00 +0000')
 
 # Generate individual items for articles 
 items = ""
@@ -63,32 +71,33 @@ for post in posts:
         text = f.read()
         yamld, content = text[3:].split('---')
         y = yaml.safe_load(yamld)
-        #Add linked title
 
-        items += """<item>
+        items += """
+    <item>
         <title>{title}</title>
         <link>{link}</link>
         <guid>{link}</guid>
         <description>{description}</description>
-    </item>""".format(
+        <pubDate>{date}</pubDate>
+    </item>\n""".format(
         title = y['title'],
+        link = 'https://cappig.ga/posts/' + postn[k][:-3],
         description = y['description'],
-        link = 'https://cappig.ga/posts/' + postn[k][:-3]
-        )
+        date = getdate(y['date']))
 
 # Generate final RSS feed
-rss = """<?xml version="1.0" ?>
+rss = """<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-    <title>Matt's blog</title>
-    <link>https://cappig.ga/</link>
-    <description>Matt's personal blog</description>
-        <image>
-            <url>https://cappig.ga/assets/favicon.png</url>
-            <title>Matt's blog</title>
-            <link>https://cappig.ga/</link>
-        </image>
-    {items}
+<title>Matt's blog</title>
+<link>https://cappig.ga/</link>
+<description>Matt's personal blog</description>
+    <image>
+        <url>https://cappig.ga/assets/favicon.png</url>
+        <title>Matt's blog</title>
+        <link>https://cappig.ga/</link>
+    </image>
+{items}
 </channel>
 </rss>""".format(items = items)
 

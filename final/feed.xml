@@ -1,19 +1,22 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-    <title>Matt's blog</title>
-    <link>https://cappig.ga/</link>
-    <description>Matt's personal blog</description>
-        <image>
-            <url>https://cappig.ga/assets/favicon.png</url>
-            <title>Matt's blog</title>
-            <link>https://cappig.ga/</link>
-        </image>
+<title>Matt's blog</title>
+<link>https://cappig.ga/</link>
+<description>Matt's personal blog</description>
+    <image>
+        <url>https://cappig.ga/assets/favicon.png</url>
+        <title>Matt's blog</title>
+        <link>https://cappig.ga/</link>
+    </image>
+
     <item>
         <title>Hello world</title>
         <link>https://cappig.ga/posts/hello</link>
         <guid>https://cappig.ga/posts/hello</guid>
         <description>A little bit about the blog</description>
+        <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
     </item>
+
 </channel>
 </rss>
