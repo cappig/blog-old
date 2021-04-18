@@ -1,12 +1,14 @@
 [data-theme="dark"] {
-    --background-color: #192734;
+    --background-color: #1a1b1f;
     --color: rgb(247, 247, 247);
     --filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(49deg) brightness(118%) contrast(89%);
+    --link-color:#ff9600;
 }
 
 [data-theme="light"] {
     --background-color: rgb(247, 247, 247);
     --color: #333;
+    --link-color:#dc8100;
 }
 
 .dm-button {
