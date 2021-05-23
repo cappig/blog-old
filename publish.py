@@ -9,7 +9,7 @@ with open("src/assets/footer.html", "r") as f:
 with open("src/assets/about_me.md", "r") as f:
     aboutme = f.read()
 
-#get names of all posts in list 
+#get names of all posts in list
 posts = (glob.glob("src/posts/*.md"))
 postn = os.listdir("src/posts/")
 
@@ -33,7 +33,7 @@ for post in posts:
         yamld, content = text[3:].split('---')
         y = yaml.safe_load(yamld)
         #Add linked title
-        feed += '<article>\n<a class="h3" href="posts/'+postn[j][:-3]+'.html">'+y['title']+'</a>' + "<br> \n"
+        feed += '<article>\n<a class="h3" href="posts/'+postn[j][:-3]+'">'+y['title']+'</a>' + "<br> \n"
         feed += '<p class="text-muted"><i>'+y['date']+ '</i>' +'   |   ' +y['description']+'</p><br>\n</article>\n'
 
 #make about me page
@@ -51,7 +51,7 @@ final = (
 open("final/index.html", "w").write(final)
 
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # Generate RSS feed
 # Code is based on https://github.com/vbuterin/blog/pull/10/files
 import calendar, datetime
@@ -63,7 +63,7 @@ def getdate(datetext):
     date = datetime.datetime(int(year), list(calendar.month_abbr).index(month), int(day))
     return date.strftime('%a, %d %b %Y 00:00:00 +0000')
 
-# Generate individual items for articles 
+# Generate individual items for articles
 items = ""
 k = 0
 for post in posts:
