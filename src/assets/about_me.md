@@ -4,4 +4,6 @@ Hi, my name’s Matt and I sometimes go by Cappig. This’ll be my blog where I�
 This blog is open source and all the code is avalible on [Github](https://github.com/cappig/blog).
 This site also has a RSS feed, check it out [here](https://cappig.ga/feed.xml).
 
+You can reach me via e-mail at [matt@cappig.ga](mailto:matt@cappig.ga)
+
 — Have a nice day, Matt :]
