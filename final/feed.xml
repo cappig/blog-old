@@ -11,9 +11,17 @@
     </image>
 
     <item>
+        <title>Advent of code</title>
+        <link>https://cappig.ga/posts/aoc2021</link>
+        <guid>https://cappig.ga/posts/aoc2021</guid>
+        <description>The 2021 edition of the Advent of code</description>
+        <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+    </item>
+
+    <item>
         <title>Hello world</title>
-        <link>https://cappig.ga/posts/hello</link>
-        <guid>https://cappig.ga/posts/hello</guid>
+        <link>https://cappig.ga/posts/aoc2021</link>
+        <guid>https://cappig.ga/posts/aoc2021</guid>
         <description>A little bit about the blog</description>
         <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
     </item>
